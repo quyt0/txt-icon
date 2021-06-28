@@ -1,110 +1,216 @@
-var originTextArea = $('#origin-text');
+﻿var originTextArea = $('#origin-text');
 var transType = "txt2icn";
 var resultTextArea = $('#converted-text');
 var transBtn = document.querySelector('#transTypeBtn');
-$(document).on("click","#emoji-picker",function(e){
-   e.stopPropagation();
-    $('.intercom-composer-emoji-popover').toggleClass("active");
-});
-
-$(document).click(function (e) {
-    if ($(e.target).attr('class') != '.intercom-composer-emoji-popover' && $(e.target).parents(".intercom-composer-emoji-popover").length == 0) {
-        $(".intercom-composer-emoji-popover").removeClass("active");
-    }
-});
-
-$(document).on("click",".intercom-emoji-picker-emoji",function(e){
-    var myTextArea = $('#origin-text');
-    myTextArea.val(myTextArea.val() + $(this).html());
-    doConversion();
-});
-
-$('.intercom-composer-popover-input').on('input', function() {
-    var query = this.value;
-    if(query != ""){
-      $(".intercom-emoji-picker-emoji:not([title*='"+query+"'])").hide();
-    }
-    else{
-      $(".intercom-emoji-picker-emoji").show();
-    }
-});
 
 function doConversion() {
-  var originText = originTextArea.val();
-  if (transType == 'txt2icn'){
-    originText = originText.toLowerCase();
-      originText = originText.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ|a/g, "😀");
-      originText = originText.replace(/b/g, "😃");
-        originText = originText.replace(/c/g, "😁");
-      originText = originText.replace(/đ|d/g, "😅");
-      originText = originText.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ|e/g, "🥰");
-        originText = originText.replace(/f/g, "🤣");
-        originText = originText.replace(/g/g, "🥲");
-      originText = originText.replace(/h/g, "☺️");
-        originText = originText.replace(/ì|í|ị|ỉ|ĩ|i/g, "😊");
-        // There's no letter "j", I don't understand why
-        originText = originText.replace(/k/g, "😇");
-        originText = originText.replace(/l/g, "😉");
-        originText = originText.replace(/m/g, "😒");
-        originText = originText.replace(/n/g, "😞");
-        originText = originText.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ|o/g, "😙");
-        originText = originText.replace(/p/g, "😟");
-        originText = originText.replace(/q/g, "😕");
-        originText = originText.replace(/r/g, "🙂");
-        originText = originText.replace(/s/g, "🙃");
-        originText = originText.replace(/t/g, "☹️");
-        originText = originText.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ|u/g, "😡");
-        originText = originText.replace(/v/g, "😍");
-        originText = originText.replace(/x/g, "😩");
-        originText = originText.replace(/ỳ|ý|ỵ|ỷ|ỹ|y/g, "😭");
-      originText = originText.replace(/w/g, "😳");
-      originText = originText.replace(/z/g, "😠");
-      originText = originText.replace(/ /g, "."); // Replace space with dot
+    var originText = originTextArea.val();
+    if (transType == 'txt2icn') {
+        originText = originText.toLowerCase();
+        originText = originText.replace(/a/g, "😀"); //Grinning Face
+        originText = originText.replace(/à/g, "🤬"); //Face with Symbols on Mouth
+        originText = originText.replace(/á/g, "😈"); //Smiling Face with Horns
+        originText = originText.replace(/ả/g, "👿"); //Angry Face with Horns
+        originText = originText.replace(/ã/g, "🤡"); //Clown Face
+        originText = originText.replace(/ạ/g, "😺"); //Grinning Cat
+        originText = originText.replace(/ă/g, "😆"); //Grinning Squinting Face
+        originText = originText.replace(/ắ/g, "🤩"); //Star-Struck
+        originText = originText.replace(/ằ/g, "😘"); //Face Blowing a Kiss
+        originText = originText.replace(/ẳ/g, "😗"); //Kissing Face
+        originText = originText.replace(/ẵ/g, "😋"); //Face Savoring Food
+        originText = originText.replace(/ặ/g, "😛"); //Face with Tongue
+        originText = originText.replace(/â/g, "😄"); //Grinning Face with Smiling Eyes
+        originText = originText.replace(/ấ/g, "😜"); //Winking Face with Tongue
+        originText = originText.replace(/ầ/g, "🤪"); //Zany Face
+        originText = originText.replace(/ẩ/g, "😝"); //Squinting Face with Tongue
+        originText = originText.replace(/ẫ/g, "🤑"); //Money-Mouth Face
+        originText = originText.replace(/ậ/g, "🤗"); //Hugging Face
+        originText = originText.replace(/b/g, "😃"); //Grinning Face with Big Eyes
+        originText = originText.replace(/c/g, "😁"); //Beaming Face with Smiling Eyes
+        originText = originText.replace(/d/g, "😅"); //Grinning Face with Sweat
+        originText = originText.replace(/đ/g, "🤭"); //Face with Hand Over Mouth
+        originText = originText.replace(/e/g, "🥰"); //Smiling Face with Hearts
+        originText = originText.replace(/é/g, "🤫"); //Shushing Face
+        originText = originText.replace(/è/g, "🤔"); //Thinking Face
+        originText = originText.replace(/ẻ/g, "🤐"); //Zipper-Mouth Face
+        originText = originText.replace(/ẽ/g, "🤨"); //Face with Raised Eyebrow
+        originText = originText.replace(/ẹ/g, "😐"); //Neutral Face
+        originText = originText.replace(/ê/g, "😑"); //Expressionless Face
+        originText = originText.replace(/ế/g, "😶"); //Face Without Mouth
+        originText = originText.replace(/ề/g, "😏"); //Smirking Face
+        originText = originText.replace(/ể/g, "🙄"); //Face with Rolling Eyes
+        originText = originText.replace(/ễ/g, "😬"); //Grimacing Face
+        originText = originText.replace(/ệ/g, "🤥"); //Lying Face
+        originText = originText.replace(/f/g, "🤣"); //Rolling on the Floor Laughing
+        originText = originText.replace(/g/g, "🥲"); //Smiling Face with Tear
+        originText = originText.replace(/h/g, "☺️"); //Smiling Face
+        originText = originText.replace(/i/g, "😊"); //Smiling Face with Smiling Eyes
+        originText = originText.replace(/í/g, "😌"); //Relieved Face
+        originText = originText.replace(/ì/g, "😔"); //Pensive Face
+        originText = originText.replace(/ỉ/g, "😪"); //Sleepy Face
+        originText = originText.replace(/ĩ/g, "🤤"); //Drooling Face
+        originText = originText.replace(/ị/g, "😴"); //Sleeping Face
+        originText = originText.replace(/k/g, "😇"); //Smiling Face with Halo
+        originText = originText.replace(/j/g, "😷"); //Face with Medical Mask
+        originText = originText.replace(/l/g, "😉"); //Winking Face
+        originText = originText.replace(/m/g, "😒"); //Unamused Face
+        originText = originText.replace(/n/g, "😞"); //Disappointed Face
+        originText = originText.replace(/o/g, "😙"); //Kissing Face with Smiling Eyes
+        originText = originText.replace(/ó/g, "🤒"); //Face with Thermometer
+        originText = originText.replace(/ò/g, "🤕"); //Face with Head-Bandage
+        originText = originText.replace(/ỏ/g, "🤢"); //Nauseated Face
+        originText = originText.replace(/õ/g, "🤮"); //Face Vomiting
+        originText = originText.replace(/ọ/g, "🤧"); //Sneezing Face
+        originText = originText.replace(/ô/g, "🥵"); //Hot Face
+        originText = originText.replace(/ố/g, "🥶"); //Cold Face
+        originText = originText.replace(/ồ/g, "🥴"); //Woozy Face
+        originText = originText.replace(/ổ/g, "😵"); //Dizzy Face
+        originText = originText.replace(/ỗ/g, "🤯"); //Exploding Head
+        originText = originText.replace(/ộ/g, "🤠"); //Cowboy Hat Face
+        originText = originText.replace(/ơ/g, "🥳"); //Partying Face
+        originText = originText.replace(/ớ/g, "😎"); //Smiling Face with Sunglasses
+        originText = originText.replace(/ờ/g, "🤓"); //Nerd Face
+        originText = originText.replace(/ở/g, "🧐"); //Face with Monocle
+        originText = originText.replace(/ỡ/g, "🙁"); //Slightly Frowning Face
+        originText = originText.replace(/ợ/g, "😮"); //Face with Open Mouth
+        originText = originText.replace(/p/g, "😟"); //Worried Face
+        originText = originText.replace(/q/g, "😕"); //Confused Face
+        originText = originText.replace(/r/g, "🙂"); //Slightly Smiling Face
+        originText = originText.replace(/s/g, "🙃"); //Upside-Down Face
+        originText = originText.replace(/t/g, "☹️"); //Frowning Face
+        originText = originText.replace(/u/g, "😡"); //Pouting Face
+        originText = originText.replace(/ú/g, "😯"); //Hushed Face
+        originText = originText.replace(/ù/g, "😲"); //Astonished Face
+        originText = originText.replace(/ủ/g, "🥺"); //Pleading Face
+        originText = originText.replace(/ũ/g, "😦"); //Frowning Face with Open Mouth
+        originText = originText.replace(/ụ/g, "😧"); //Anguished Face
+        originText = originText.replace(/ư/g, "😨"); //Fearful Face
+        originText = originText.replace(/ứ/g, "😰"); //Anxious Face with Sweat
+        originText = originText.replace(/ừ/g, "😥"); //Sad but Relieved Face
+        originText = originText.replace(/ử/g, "😢"); //Crying Face
+        originText = originText.replace(/ữ/g, "😱"); //Face Screaming in Fear
+        originText = originText.replace(/ự/g, "😖"); //Confounded Face
+        originText = originText.replace(/v/g, "😍"); //Smiling Face with Heart-Eyes
+        originText = originText.replace(/x/g, "😩"); //Weary Face
+        originText = originText.replace(/y/g, "😭"); //Loudly Crying Face
+        originText = originText.replace(/ý/g, "😣"); //Persevering Face
+        originText = originText.replace(/ỳ/g, "😓"); //Downcast Face with Sweat
+        originText = originText.replace(/ỷ/g, "😫"); //Tired Face
+        originText = originText.replace(/ỹ/g, "😤"); //Face with Steam From Nose
+        originText = originText.replace(/ỵ/g, "😚"); //Kissing Face with Closed Eyes
+        originText = originText.replace(/w/g, "😳"); //Flushed Face
+        originText = originText.replace(/z/g, "😠"); //Angry Face
+        originText = originText.replace(/ /g, "."); //Replace space with dot
 
-        // Some system encode Vietnamese combining accent as individual utf-8 characters
-        originText = originText.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, ""); // Huyền sắc hỏi ngã nặng
-        originText = originText.replace(/\u02C6|\u0306|\u031B/g, ""); // Â, Ê, Ă, Ơ, Ư       
-}
-else if (transType == 'icn2txt'){
-    originText = originText.toLowerCase();
-      originText = originText.replace(/😀/g, "a");
-      originText = originText.replace(/😃/g, "b");
-        originText = originText.replace(/😁/g, "c");
-      originText = originText.replace(/😅/g, "d");
-      originText = originText.replace(/🥰/g, "e");
-        originText = originText.replace(/🤣/g, "f");
-        originText = originText.replace(/🥲/g, "g");
-      originText = originText.replace(/☺️/g, "h");
-        originText = originText.replace(/😊/g, "i");
-        // There's no letter "j", I don't understand why
-        originText = originText.replace(/😇/g, "k");
-        originText = originText.replace(/😉/g, "l");
-        originText = originText.replace(/😒/g, "m");
-        originText = originText.replace(/😞/g, "n");
-        originText = originText.replace(/😙/g, "o");
-        originText = originText.replace(/😟/g, "p");
-        originText = originText.replace(/😕/g, "q");
-        originText = originText.replace(/🙂/g, "r");
-        originText = originText.replace(/🙃/g, "s");
-        originText = originText.replace(/☹️/g, "t");
-        originText = originText.replace(/😡/g, "u");
-        originText = originText.replace(/😍/g, "v");
-        originText = originText.replace(/😩/g, "x");
-        originText = originText.replace(/😭/g, "y");
-      originText = originText.replace(/😳/g, "w");
-      originText = originText.replace(/😠/g, "z");
-      originText = originText.replace(/\./g,' '); // Replace dot with space
-};
-  resultTextArea.val(originText);
+
+
+    } else if (transType == 'icn2txt') {
+        originText = originText.toLowerCase();
+        originText = originText.replace(/😀/g, "a"); //Grinning Face
+        originText = originText.replace(/🤬/g, "à"); //Face with Symbols on Mouth
+        originText = originText.replace(/😈/g, "á"); //Smiling Face with Horns
+        originText = originText.replace(/👿/g, "ả"); //Angry Face with Horns
+        originText = originText.replace(/🤡/g, "ã"); //Clown Face
+        originText = originText.replace(/😺/g, "ạ"); //Grinning Cat
+        originText = originText.replace(/😆/g, "ă"); //Grinning Squinting Face
+        originText = originText.replace(/🤩/g, "ắ"); //Star-Struck
+        originText = originText.replace(/😘/g, "ằ"); //Face Blowing a Kiss
+        originText = originText.replace(/😗/g, "ẳ"); //Kissing Face
+        originText = originText.replace(/😋/g, "ẵ"); //Face Savoring Food
+        originText = originText.replace(/😛/g, "ặ"); //Face with Tongue
+        originText = originText.replace(/😄/g, "â"); //Grinning Face with Smiling Eyes
+        originText = originText.replace(/😜/g, "ấ"); //Winking Face with Tongue
+        originText = originText.replace(/🤪/g, "ầ"); //Zany Face
+        originText = originText.replace(/😝/g, "ẩ"); //Squinting Face with Tongue
+        originText = originText.replace(/🤑/g, "ẫ"); //Money-Mouth Face
+        originText = originText.replace(/🤗/g, "ậ"); //Hugging Face
+        originText = originText.replace(/😃/g, "b"); //Grinning Face with Big Eyes
+        originText = originText.replace(/😁/g, "c"); //Beaming Face with Smiling Eyes
+        originText = originText.replace(/😅/g, "d"); //Grinning Face with Sweat
+        originText = originText.replace(/🤭/g, "đ"); //Face with Hand Over Mouth
+        originText = originText.replace(/🥰/g, "e"); //Smiling Face with Hearts
+        originText = originText.replace(/🤫/g, "é"); //Shushing Face
+        originText = originText.replace(/🤔/g, "è"); //Thinking Face
+        originText = originText.replace(/🤐/g, "ẻ"); //Zipper-Mouth Face
+        originText = originText.replace(/🤨/g, "ẽ"); //Face with Raised Eyebrow
+        originText = originText.replace(/😐/g, "ẹ"); //Neutral Face
+        originText = originText.replace(/😑/g, "ê"); //Expressionless Face
+        originText = originText.replace(/😶/g, "ế"); //Face Without Mouth
+        originText = originText.replace(/😏/g, "ề"); //Smirking Face
+        originText = originText.replace(/🙄/g, "ể"); //Face with Rolling Eyes
+        originText = originText.replace(/😬/g, "ễ"); //Grimacing Face
+        originText = originText.replace(/🤥/g, "ệ"); //Lying Face
+        originText = originText.replace(/🤣/g, "f"); //Rolling on the Floor Laughing
+        originText = originText.replace(/🥲/g, "g"); //Smiling Face with Tear
+        originText = originText.replace(/☺️/g, "h"); //Smiling Face
+        originText = originText.replace(/😊/g, "i"); //Smiling Face with Smiling Eyes
+        originText = originText.replace(/😌/g, "í"); //Relieved Face
+        originText = originText.replace(/😔/g, "ì"); //Pensive Face
+        originText = originText.replace(/😪/g, "ỉ"); //Sleepy Face
+        originText = originText.replace(/🤤/g, "ĩ"); //Drooling Face
+        originText = originText.replace(/😴/g, "ị"); //Sleeping Face
+        originText = originText.replace(/😇/g, "k"); //Smiling Face with Halo
+        originText = originText.replace(/😷/g, "j"); //Face with Medical Mask
+        originText = originText.replace(/😉/g, "l"); //Winking Face
+        originText = originText.replace(/😒/g, "m"); //Unamused Face
+        originText = originText.replace(/😞/g, "n"); //Disappointed Face
+        originText = originText.replace(/😙/g, "o"); //Kissing Face with Smiling Eyes
+        originText = originText.replace(/🤒/g, "ó"); //Face with Thermometer
+        originText = originText.replace(/🤕/g, "ò"); //Face with Head-Bandage
+        originText = originText.replace(/🤢/g, "ỏ"); //Nauseated Face
+        originText = originText.replace(/🤮/g, "õ"); //Face Vomiting
+        originText = originText.replace(/🤧/g, "ọ"); //Sneezing Face
+        originText = originText.replace(/🥵/g, "ô"); //Hot Face
+        originText = originText.replace(/🥶/g, "ố"); //Cold Face
+        originText = originText.replace(/🥴/g, "ồ"); //Woozy Face
+        originText = originText.replace(/😵/g, "ổ"); //Dizzy Face
+        originText = originText.replace(/🤯/g, "ỗ"); //Exploding Head
+        originText = originText.replace(/🤠/g, "ộ"); //Cowboy Hat Face
+        originText = originText.replace(/🥳/g, "ơ"); //Partying Face
+        originText = originText.replace(/😎/g, "ớ"); //Smiling Face with Sunglasses
+        originText = originText.replace(/🤓/g, "ờ"); //Nerd Face
+        originText = originText.replace(/🧐/g, "ở"); //Face with Monocle
+        originText = originText.replace(/🙁/g, "ỡ"); //Slightly Frowning Face
+        originText = originText.replace(/😮/g, "ợ"); //Face with Open Mouth
+        originText = originText.replace(/😟/g, "p"); //Worried Face
+        originText = originText.replace(/😕/g, "q"); //Confused Face
+        originText = originText.replace(/🙂/g, "r"); //Slightly Smiling Face
+        originText = originText.replace(/🙃/g, "s"); //Upside-Down Face
+        originText = originText.replace(/☹️/g, "t"); //Frowning Face
+        originText = originText.replace(/😡/g, "u"); //Pouting Face
+        originText = originText.replace(/😯/g, "ú"); //Hushed Face
+        originText = originText.replace(/😲/g, "ù"); //Astonished Face
+        originText = originText.replace(/🥺/g, "ủ"); //Pleading Face
+        originText = originText.replace(/😦/g, "ũ"); //Frowning Face with Open Mouth
+        originText = originText.replace(/😧/g, "ụ"); //Anguished Face
+        originText = originText.replace(/😨/g, "ư"); //Fearful Face
+        originText = originText.replace(/😰/g, "ứ"); //Anxious Face with Sweat
+        originText = originText.replace(/😥/g, "ừ"); //Sad but Relieved Face
+        originText = originText.replace(/😢/g, "ử"); //Crying Face
+        originText = originText.replace(/😱/g, "ữ"); //Face Screaming in Fear
+        originText = originText.replace(/😖/g, "ự"); //Confounded Face
+        originText = originText.replace(/😍/g, "v"); //Smiling Face with Heart-Eyes
+        originText = originText.replace(/😩/g, "x"); //Weary Face
+        originText = originText.replace(/😭/g, "y"); //Loudly Crying Face
+        originText = originText.replace(/😣/g, "ý"); //Persevering Face
+        originText = originText.replace(/😓/g, "ỳ"); //Downcast Face with Sweat
+        originText = originText.replace(/😫/g, "ỷ"); //Tired Face
+        originText = originText.replace(/😤/g, "ỹ"); //Face with Steam From Nose
+        originText = originText.replace(/😚/g, "ỵ"); //Kissing Face with Closed Eyes
+        originText = originText.replace(/😳/g, "w"); //Flushed Face
+        originText = originText.replace(/😠/g, "z"); //Angry Face
+        originText = originText.replace(/\./g, ' '); // Replace dot with space
+    };
+    resultTextArea.val(originText);
 }
 
 transBtn.addEventListener('click', function(event) {
-  if (transType == 'icn2txt'){
-    transType = 'txt2icn';
-    document.getElementById('typeConvert').innerHTML = 'Nhập đoạn văn bản cần chuyển đổi: (Loại dịch: Tin nhắn ---> icon)';
-  } else if (transType == 'txt2icn'){
-    transType = 'icn2txt'
-    document.getElementById('typeConvert').innerHTML = 'Nhập đoạn văn bản cần chuyển đổi: (Loại dịch: Icon ---> tin nhắn)';
-  }
-  doConversion();
+    if (transType == 'icn2txt') {
+        transType = 'txt2icn';
+        document.getElementById('typeConvert').innerHTML = 'Nhập đoạn văn bản cần chuyển đổi: (Loại dịch: Tin nhắn ---> icon)';
+    } else if (transType == 'txt2icn') {
+        transType = 'icn2txt'
+        document.getElementById('typeConvert').innerHTML = 'Nhập đoạn văn bản cần chuyển đổi: (Loại dịch: Icon ---> tin nhắn)';
+    }
+    doConversion();
 });
