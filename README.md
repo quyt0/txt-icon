@@ -1,95 +1,95 @@
-a: 😀 (Grinning Face)__
-à: 🤬 (Face with Symbols on Mouth)__
-á: 😈 (Smiling Face with Horns)__
-ả: 👿 (Angry Face with Horns)__
-ã: 🤡 (Clown Face)__
-ạ: 😺 (Grinning Cat)__
-ă: 😆 (Grinning Squinting Face)__
-ắ: 🤩 (Star-Struck)__
-ằ: 😘 (Face Blowing a Kiss)__
-ẳ: 😗 (Kissing Face)__
-ẵ: 😋 (Face Savoring Food)__
-ặ: 😛 (Face with Tongue)__
-â: 😄 (Grinning Face with Smiling Eyes)__
-ấ: 😜 (Winking Face with Tongue)__
-ầ: 🤪 (Zany Face)__
-ẩ: 😝 (Squinting Face with Tongue)__
-ẫ: 🤑 (Money-Mouth Face)__
-ậ: 🤗 (Hugging Face)__
-b: 😃 (Grinning Face with Big Eyes)__
-c: 😁 (Beaming Face with Smiling Eyes)__
-d: 😅 (Grinning Face with Sweat)__
-đ: 🤭 (Face with Hand Over Mouth)__
-e: 🥰 (Smiling Face with Hearts)__
-é: 🤫 (Shushing Face)__
-è: 🤔 (Thinking Face)__
-ẻ: 🤐 (Zipper-Mouth Face)__
-ẽ: 🤨 (Face with Raised Eyebrow)__
-ẹ: 😐 (Neutral Face)__
-ê: 😑 (Expressionless Face)__
-ế: 😶 (Face Without Mouth)__
-ề: 😏 (Smirking Face)__
-ể: 🙄 (Face with Rolling Eyes)__
-ễ: 😬 (Grimacing Face)__
-ệ: 🤥 (Lying Face)__
-f: 🤣 (Rolling on the Floor Laughing)__
-g: 🥲 (Smiling Face with Tear)__
-h: ☺️ (Smiling Face)__
-i: 😊 (Smiling Face with Smiling Eyes)__
-í: 😌 (Relieved Face)__
-ì: 😔 (Pensive Face)__
-ỉ: 😪 (Sleepy Face)__
-ĩ: 🤤 (Drooling Face)__
-ị: 😴 (Sleeping Face)__
-k: 😇 (Smiling Face with Halo)__
-j: 😷 (Face with Medical Mask)__
-l: 😉 (Winking Face)__
-m: 😒 (Unamused Face)__
-n: 😞 (Disappointed Face)__
-o: 😙 (Kissing Face with Smiling Eyes)__
-ó: 🤒 (Face with Thermometer)__
-ò: 🤕 (Face with Head-Bandage)__
-ỏ: 🤢 (Nauseated Face)__
-õ: 🤮 (Face Vomiting)__
-ọ: 🤧 (Sneezing Face)__
-ô: 🥵 (Hot Face)__
-ố: 🥶 (Cold Face)__
-ồ: 🥴 (Woozy Face)__
-ổ: 😵 (Dizzy Face)__
-ỗ: 🤯 (Exploding Head)__
-ộ: 🤠 (Cowboy Hat Face)__
-ơ: 🥳 (Partying Face)__
-ớ: 😎 (Smiling Face with Sunglasses)__
-ờ: 🤓 (Nerd Face)__
-ở: 🧐 (Face with Monocle)__
-ỡ: 🙁 (Slightly Frowning Face)__
-ợ: 😮 (Face with Open Mouth)__
-p: 😟 (Worried Face)__
-q: 😕 (Confused Face)__
-r: 🙂 (Slightly Smiling Face)__
-s: 🙃 (Upside-Down Face)__
-t: ☹️ (Frowning Face)__
-u: 😡 (Pouting Face)__
-ú: 😯 (Hushed Face)__
-ù: 😲 (Astonished Face)__
-ủ: 🥺 (Pleading Face)__
-ũ: 😦 (Frowning Face with Open Mouth)__
-ụ: 😧 (Anguished Face)__
-ư: 😨 (Fearful Face)__
-ứ: 😰 (Anxious Face with Sweat)__
-ừ: 😥 (Sad but Relieved Face)__
-ử: 😢 (Crying Face)__
-ữ: 😱 (Face Screaming in Fear)__
-ự: 😖 (Confounded Face)__
-v: 😍 (Smiling Face with Heart-Eyes)__
-x: 😩 (Weary Face)__
-y: 😭 (Loudly Crying Face)__
-ý: 😣 (Persevering Face)__
-ỳ: 😓 (Downcast Face with Sweat)__
-ỷ: 😫 (Tired Face)__
-ỹ: 😤 (Face with Steam From Nose)__
-ỵ: 😚 (Kissing Face with Closed Eyes)__
-w: 😳 (Flushed Face)__
-z: 😠 (Angry Face)__
+a: 😀 (Grinning Face) </br>
+à: 🤬 (Face with Symbols on Mouth) </br>
+á: 😈 (Smiling Face with Horns) </br>
+ả: 👿 (Angry Face with Horns) </br>
+ã: 🤡 (Clown Face) </br>
+ạ: 😺 (Grinning Cat) </br>
+ă: 😆 (Grinning Squinting Face) </br>
+ắ: 🤩 (Star-Struck) </br>
+ằ: 😘 (Face Blowing a Kiss) </br>
+ẳ: 😗 (Kissing Face) </br>
+ẵ: 😋 (Face Savoring Food) </br>
+ặ: 😛 (Face with Tongue) </br>
+â: 😄 (Grinning Face with Smiling Eyes) </br>
+ấ: 😜 (Winking Face with Tongue) </br>
+ầ: 🤪 (Zany Face) </br>
+ẩ: 😝 (Squinting Face with Tongue) </br>
+ẫ: 🤑 (Money-Mouth Face) </br>
+ậ: 🤗 (Hugging Face) </br>
+b: 😃 (Grinning Face with Big Eyes) </br>
+c: 😁 (Beaming Face with Smiling Eyes) </br>
+d: 😅 (Grinning Face with Sweat) </br>
+đ: 🤭 (Face with Hand Over Mouth) </br>
+e: 🥰 (Smiling Face with Hearts) </br>
+é: 🤫 (Shushing Face) </br>
+è: 🤔 (Thinking Face) </br>
+ẻ: 🤐 (Zipper-Mouth Face) </br>
+ẽ: 🤨 (Face with Raised Eyebrow) </br>
+ẹ: 😐 (Neutral Face) </br>
+ê: 😑 (Expressionless Face) </br>
+ế: 😶 (Face Without Mouth) </br>
+ề: 😏 (Smirking Face) </br>
+ể: 🙄 (Face with Rolling Eyes) </br>
+ễ: 😬 (Grimacing Face) </br>
+ệ: 🤥 (Lying Face) </br>
+f: 🤣 (Rolling on the Floor Laughing) </br>
+g: 🥲 (Smiling Face with Tear) </br>
+h: ☺️ (Smiling Face) </br>
+i: 😊 (Smiling Face with Smiling Eyes) </br>
+í: 😌 (Relieved Face) </br>
+ì: 😔 (Pensive Face) </br>
+ỉ: 😪 (Sleepy Face) </br>
+ĩ: 🤤 (Drooling Face) </br>
+ị: 😴 (Sleeping Face) </br>
+k: 😇 (Smiling Face with Halo) </br>
+j: 😷 (Face with Medical Mask) </br>
+l: 😉 (Winking Face) </br>
+m: 😒 (Unamused Face) </br>
+n: 😞 (Disappointed Face) </br>
+o: 😙 (Kissing Face with Smiling Eyes) </br>
+ó: 🤒 (Face with Thermometer) </br>
+ò: 🤕 (Face with Head-Bandage) </br>
+ỏ: 🤢 (Nauseated Face) </br>
+õ: 🤮 (Face Vomiting) </br>
+ọ: 🤧 (Sneezing Face) </br>
+ô: 🥵 (Hot Face) </br>
+ố: 🥶 (Cold Face) </br>
+ồ: 🥴 (Woozy Face) </br>
+ổ: 😵 (Dizzy Face) </br>
+ỗ: 🤯 (Exploding Head) </br>
+ộ: 🤠 (Cowboy Hat Face) </br>
+ơ: 🥳 (Partying Face) </br>
+ớ: 😎 (Smiling Face with Sunglasses) </br>
+ờ: 🤓 (Nerd Face) </br>
+ở: 🧐 (Face with Monocle) </br>
+ỡ: 🙁 (Slightly Frowning Face) </br>
+ợ: 😮 (Face with Open Mouth) </br>
+p: 😟 (Worried Face) </br>
+q: 😕 (Confused Face) </br>
+r: 🙂 (Slightly Smiling Face) </br>
+s: 🙃 (Upside-Down Face) </br>
+t: ☹️ (Frowning Face) </br>
+u: 😡 (Pouting Face) </br>
+ú: 😯 (Hushed Face) </br>
+ù: 😲 (Astonished Face) </br>
+ủ: 🥺 (Pleading Face) </br>
+ũ: 😦 (Frowning Face with Open Mouth) </br>
+ụ: 😧 (Anguished Face) </br>
+ư: 😨 (Fearful Face) </br>
+ứ: 😰 (Anxious Face with Sweat) </br>
+ừ: 😥 (Sad but Relieved Face) </br>
+ử: 😢 (Crying Face) </br>
+ữ: 😱 (Face Screaming in Fear) </br>
+ự: 😖 (Confounded Face) </br>
+v: 😍 (Smiling Face with Heart-Eyes) </br>
+x: 😩 (Weary Face) </br>
+y: 😭 (Loudly Crying Face) </br>
+ý: 😣 (Persevering Face) </br>
+ỳ: 😓 (Downcast Face with Sweat) </br>
+ỷ: 😫 (Tired Face) </br>
+ỹ: 😤 (Face with Steam From Nose) </br>
+ỵ: 😚 (Kissing Face with Closed Eyes) </br>
+w: 😳 (Flushed Face) </br>
+z: 😠 (Angry Face) </br>
 
 Truy cập: https://emojipedia.org/ để tìm kiếm emoji tương ứng với tên trong ngoặc.
