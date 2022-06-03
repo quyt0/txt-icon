@@ -4,7 +4,7 @@ Link: https://www.facebook.com/groups/483716932807416/posts/558972278615214/
 </br></br>
 Mình tạo trang này nhằm hỗ trợ chuyển đổi tin nhắn sang dạng icon (theo các thông tin thu thập được từ note của chàng trai) cho các bạn tò mò, muốn tìm hiểu.
 </br></br>
-P/s: Đã update hỗ trợ tiếng Việt nha các bác. Chi tiết xem tại đây
+P/s: Đã update hỗ trợ tiếng Việt nha các bác. Chi tiết:
 
 a: 😀 (Grinning Face) </br>
 à: 🤬 (Face with Symbols on Mouth) </br>
