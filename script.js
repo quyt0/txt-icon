@@ -6,6 +6,7 @@ $(document).ready(function() {
     var copyBtn = document.querySelector('#copy-result');
     var transBtn = document.querySelector('#transTypeBtn');
     var pasteBtn = document.querySelector('#pasteBtn');
+    var clearBtn = document.querySelector('#clearBtn');
     var transType = "txt2icn";
 
     async function PasteFunction() {
@@ -55,6 +56,11 @@ $(document).ready(function() {
 
     pasteBtn.addEventListener('click', function(event) {
         PasteFunction();
+    });
+
+    clearBtn.addEventListener('click', function(event) {
+        originTextArea.val('');
+        resultTextArea.val('');
     });
 
     originTextArea.bind('input propertychange', function() {
