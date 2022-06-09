@@ -1,75 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Chuyển tin nhắn sang dạng icon</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/gh/thekondrashov/ie10-viewport@1.0/css/ie10-viewport.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <div class="container col-md-8 col-md-offset-2">
-        <div class="header clearfix">
-            <nav>
-                <ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="active">
-                        <a class="btn btn-default" data-toggle="modal" data-target="#myModal" href="#">Thông tin web</a>
-                    </li>
-                </ul>
-                <h4 class="text-muted">Chuyển tin nhắn sang dạng icon</h4>
-            </nav>
-        </div>
-        <div class="form-group">
-            <label for="origin-text" id="typeConvert">Nhập đoạn văn bản cần chuyển đổi: (Loại dịch: Tin nhắn ---> icon)</label>
-            <textarea class="form-control" rows="8" id="origin-text" style="font-size: 13pt"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="converted-text">Kết quả:</label>
-            <button style="margin-bottom:0.5rem;" id="transTypeBtn" class="btn btn-default">Chuyển loại dịch</button>
-            <button style="margin-bottom:0.5rem;" id="copy-result" class="btn btn-default">Sao chép</button>
-            <button style="margin-bottom:0.5rem;" id="clearBtn" class="btn btn-default">Xoá</button>
-            <button style="margin-bottom:0.5rem;" id="pasteBtn" class="btn btn-default">Dán</button>
-            <textarea readonly="true" class="form-control" rows="8" id="converted-text" style="font-size: 15pt"></textarea>
-        </div>
-        <footer class="footer">
-            <p>Công cụ chuyển đổi tin nhắn sang dạng icon | Hãy sử dụng cho vui, đừng sử dụng để cắm sừng 😀</p>
-            <p>
-                Viết bởi <a href="https://www.facebook.com/dp.cuyts/">Cuýt</a>
-                .
-            </p>
-        </footer>
-        <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Giới thiệu về trang web</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Gần đây trên MXH Facebook xuất hiện đoạn tin nhắn của chàng trai được cho là đã "cắm sừng" cô gái bằng tin nhắn mã hóa theo phong cách icon. Chi tiết ra sao, mời các bạn sử dụng trang web</p>
-                        <p>
-                            Link: <a href="https://www.facebook.com/groups/483716932807416/posts/558972278615214/">https://www.facebook.com/groups/483716932807416/posts/558972278615214/</a>
-                        </p>
-                        <p>Mình tạo trang này nhằm hỗ trợ chuyển đổi tin nhắn sang dạng icon (theo các thông tin thu thập được từ note của chàng trai) cho các bạn tò mò, muốn tìm hiểu.</p>
-                        <p>P/s: Đã update hỗ trợ tiếng Việt nha các bác. <a href="https://raw.githubusercontent.com/quyt0/txt-icon/main/note.txt">Chi tiết xem tại đây</a> </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-                    </div>
+    <div class="main">
+        <header>
+            <h1 class="main-heading">Chuyển tin nhắn sang dạng icon</h1>
+            <a class="btn btn-info">Thông tin web</a>
+        </header>
+
+        <div class="app">
+            <div class="input-group">
+                <label for="input-text">Nhập văn bản cần chuyển đổi: <span id="convert-type">(Loại dịch: Tin nhắn ---> icon)</span></label>
+                <div class="input-btn">
+                    <a class="btn btn-clear">Xoá</a>
+                    <a class="btn btn-paste">Dán</a>
                 </div>
             </div>
+            <textarea name="input-text" id="input-text"></textarea>
+            <label for="result-text">Kết quả:</label>
+            <a class="btn btn-change">Chuyển loại dịch</a>
+            <a class="btn btn-copy">Sao chép</a>
+            <textarea name="result-text" id="result-text" readonly></textarea>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="aa6269d4c73e18d55fc89e7f-text/javascript"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" type="aa6269d4c73e18d55fc89e7f-text/javascript"></script>
-        <script src="https://cdn.jsdelivr.net/gh/thekondrashov/ie10-viewport@1.0/js/ie10-viewport.min.js" type="aa6269d4c73e18d55fc89e7f-text/javascript"></script>
-        <script type="text/javascript" charset="UTF-8" src="./script.js"></script>
-        <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="aa6269d4c73e18d55fc89e7f-|49" defer=""></script>
-</body>
 
+        <footer>
+            <p>Công cụ chuyển đổi tin nhắn sang dạng icon | Hãy sử dụng cho vui, đừng sử dụng để cắm sừng 😀</p>
+            <p>Viết bởi <a href="https://www.facebook.com/cuyt.dev/" style="text-decoration: none">Cuýt</a>.</p>
+        </footer>
+    </div>
+
+    <div class="modal">
+        <div class="overlay">
+
+        </div>
+
+        <div class="inner">
+            <header class="modal-header">
+                Giới thiệu về trang web
+            </header>
+
+            <div class="modal-content">
+                <p>Gần đây trên MXH Facebook xuất hiện đoạn tin nhắn của chàng trai được cho là đã "cắm sừng" cô gái bằng tin nhắn mã hóa theo phong cách icon. Chi tiết ra sao, mời các bạn sử dụng trang web</p>
+                <p>Link: https://www.facebook.com/groups/483716932807416/posts/558972278615214/</p>
+                <p>Mình tạo trang này nhằm hỗ trợ chuyển đổi tin nhắn sang dạng icon (theo các thông tin thu thập được từ note của chàng trai) cho các bạn tò mò, muốn tìm hiểu.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/script.js"></script>
+</body>
 </html>
