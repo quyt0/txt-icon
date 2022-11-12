@@ -54,7 +54,7 @@ $(document).ready(function() {
         PasteFunction();
     };
     
-    $(inputText).bind('input propertychange', function() {
+    document.querySelector('#input-text').addEventListener('input', () => {
         doConversion();
     });
 
