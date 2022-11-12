@@ -66,8 +66,15 @@ header .btn-info {
     line-height: 30px;
 }
 
+.func-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .app .btn-change,
-.app .btn-copy {
+.app .btn-copy,
+.app .btn-trans {
     line-height: 22px;
 }
 
@@ -150,6 +157,12 @@ header .btn-info {
 
     .app .input-btn {
         display: inline-block;
+    }
+
+    .func-group {
+        flex-direction: column;
+        gap: 5px;
+        align-items: unset;
     }
 
     .app textarea::selection {
