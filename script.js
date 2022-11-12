@@ -62,5 +62,9 @@ $(document).ready(function() {
         $(inputText).val('');
         $(resultText).val('');
     };
+
+    document.querySelector('.btn-trans').onclick = function() {
+        doConversion();
+    }
 });
 
