@@ -30,6 +30,10 @@ $(document).ready(function() {
     }
     
     document.querySelector('.btn-change').onclick = function() {
+        var t = date.split(/[- :]/);
+        var d = new Date (t[0], t[1] - 1, t[2]);
+        var actionDate = newDate(d);
+        
         if (transType == 'icn2txt') {
             transType = 'txt2icn';
             document.getElementById('convert-type').innerHTML = '(Loại dịch: Tin nhắn ---> icon)';
